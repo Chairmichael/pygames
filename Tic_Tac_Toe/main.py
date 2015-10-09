@@ -2,8 +2,12 @@
 # -*- coding: utf-8 -*-
 # 
 import os
+import platform
 #clears the terminal
-def terminal_clear(): os.system('clear')
+def terminal_clear(): 
+	if (platform.system() == "Linux"): os.system('clear')
+	elif (platform.system() == "Windows"):os.system('cls')
+	else: print("You're probably screwed")
 
 """	A class that has methods to display the board, 
 	whos turn, and the palyers name and score.
