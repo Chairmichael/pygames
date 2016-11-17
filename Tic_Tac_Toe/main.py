@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 # 
-import os
+import os, sys
 import platform
 #clears the terminal
 def terminal_clear(): 
@@ -26,7 +26,7 @@ class Display(object):
 	
 	#get input from the user as to where to place a piece
 	def get_move(self):
-		return [raw_input('row:'), raw_input('col:')]
+		return [input('row:'), input('col:')]
 	
 
 """ A class
